@@ -1,0 +1,273 @@
+:root {
+  --primary-color: #000000;
+  --background-color: #FFFFFF;
+  --accent-color: #E0D8D1;
+  --text-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Afacad', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Header Styles */
+.header {
+  background: white;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1rem 0;
+}
+
+.header-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav-link.active {
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.search-bar {
+  position: relative;
+  width: 250px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-family: 'Afacad', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(90deg, #FFE4D6 0%, #FFB088 100%);
+  padding: 4rem 2rem;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+/* Featured Section */
+.featured {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: #4F7355;
+  color: white;
+}
+
+.featured-text {
+  position: relative;
+}
+
+.featured-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.featured-text p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.flower-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 200px;
+}
+
+.featured-products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Product Cards */
+.product-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: 1rem;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rating {
+  color: #FFD700;
+  margin: 0.5rem 0;
+}
+
+.add-to-cart {
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.75rem 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+/* Filters */
+.filters {
+  padding: 2rem;
+  background: #F5F5F5;
+}
+
+.filter-group {
+  margin-bottom: 2rem;
+}
+
+.filter-group h4 {
+  margin-bottom: 1rem;
+  font-family: 'Cabin', sans-serif;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Footer */
+footer {
+  background: var(--accent-color);
+  padding: 4rem 2rem;
+}
+
+.footer-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+}
+
+.footer-left .mission {
+  margin: 2rem 0;
+  max-width: 600px;
+}
+
+.footer-right h3 {
+  margin-bottom: 2rem;
+}
+
+.footer-right nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-right a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .featured {
+      grid-template-columns: 1fr;
+  }
+  
+  .featured-products {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+      flex-direction: column;
+      gap: 1rem;
+  }
+  
+  .nav-menu {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  
+  .header-actions {
+      width: 100%;
+      justify-content: center;
+  }
+  
+  .search-bar {
+      width: 100%;
+  }
+  
+  .footer-content {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+      font-size: 2.5rem;
+  }
+  
+  .featured-text h2 {
+      font-size: 2rem;
+  }
+  
+  .product-grid {
+      grid-template-columns: 1fr;
+  }
+}

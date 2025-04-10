@@ -1,0 +1,77 @@
+body {
+    font-family: Arial;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 0%;
+    border: 1.5px solid #a1a1a1;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.b-login {
+    background-color: #333;
+    color: white;
+    border: none;
+    width: auto;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center; 
+    margin: 0 auto;
+    display: block;
+}
+
+.b-login:hover {
+    background-color: #080808;
+}
+
+.forgot-password {
+    text-align: left; 
+    margin-bottom: 40px;
+}
+
+.forgot-password a {
+    color: #333;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.create-account {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-create-account {
+    color: #333;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.btn-create-account:hover {
+    text-decoration: underline;
+}

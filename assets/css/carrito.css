@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  font-style: italic;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 150px;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.user-actions a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Hero section with flowers */
+.hero {
+  position: relative;
+  background-color: #FFF8E7;
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+.hero-content {
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.hero h1 svg {
+  margin-left: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 400px;
+}
+
+.flowers-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-image: url('/placeholder.svg?height=300&width=300');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* Cart table */
+.cart-table {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th {
+  text-align: left;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #999;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.cart-table th:last-child {
+  text-align: right;
+}
+
+.cart-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+}
+
+.cart-item-image {
+  width: 120px;
+  height: 120px;
+  background-color: #f5f5f5;
+  margin-right: 20px;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cart-item-price {
+  color: #666;
+  font-size: 14px;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.quantity-control button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.quantity-control input {
+  width: 40px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+.cart-item-remove {
+  margin-left: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-item-total {
+  font-weight: bold;
+  text-align: right;
+  width: 120px;
+}
+
+/* Cart summary */
+.cart-summary {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.order-note {
+  max-width: 350px;
+}
+
+.order-total {
+  text-align: right;
+}
+
+.order-total h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.shipping-note {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.checkout-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+  background-color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-about {
+  max-width: 300px;
+}
+
+.footer-links h4 {
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.contact-info {
+  margin-top: 10px;
+}
