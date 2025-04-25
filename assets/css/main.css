@@ -1,19 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 /* Base Styles */
 :root {
-  --color-primary: #4a7c59;
-  --color-primary-light: #5b9b6d;
-  --color-primary-dark: #3a6147;
-  --color-secondary: #f8d7c4;
+  --color-primary: #4E7646;
+  --color-primary-light: #73a469;
+  --color-primary-dark: #355130;
+  --color-secondary: #FFD582;
   --color-secondary-light: #fae7db;
   --color-secondary-dark: #f6c7ad;
   --color-black: #000;
   --color-white: #fff;
   --color-gray-light: #f5f5f5;
   --color-gray: #e0e0e0;
-  --color-gray-dark: #333;
+  --color-gray-dark: #4a4a4a;
   
-  --font-primary: 'Montserrat', sans-serif;
-  --font-secondary: 'Playfair Display', serif;
+  --font-primary: 'Cabin', sans-serif;
+  --font-secondary: 'Afacad', serif;
   
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
@@ -462,7 +463,10 @@ a {
 /* Products Section */
 .products {
   padding: var(--spacing-xxl) 0;
-  background-color: var(--color-secondary-light);
+  background-image: linear-gradient(
+      var(--color-secondary-light), /* Color de arriba (#fae7db) */
+      var(--color-white)            /* Color de abajo (#ffffff) */
+  );
 }
 
 .products-grid {
@@ -503,7 +507,7 @@ a {
 .product-image {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
 }
 
 .product-image img {
@@ -661,6 +665,7 @@ a {
 .occasion-image {
   border-radius: var(--border-radius-lg);
   overflow: hidden;
+  position: relative;
 }
 
 .occasion-image img {
@@ -668,17 +673,31 @@ a {
   height: auto;
   object-fit: cover;
   aspect-ratio: 1 / 1;
+  display: block;
+}
+
+.occasion-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffd58231;
+  border-radius: inherit;
+  pointer-events: none;
 }
 
 .occasion-title {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.35rem;
+  font-weight: 700;
   margin-bottom: var(--spacing-xs);
 }
 
 .occasion-description {
   color: var(--color-gray-dark);
-  font-size: 1rem;
+  font-size: 23px;
+  font-weight: 200;
 }
 
 /* Promo Section */
