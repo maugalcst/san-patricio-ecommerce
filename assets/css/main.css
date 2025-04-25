@@ -108,16 +108,35 @@ a {
   color: var(--color-black);
 }
 
-.logo h1 {
-  font-family: var(--font-secondary);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+.logo a {
+  display: inline-block;
+  color: var(--color-black);
 }
 
-.logo p {
-  font-size: 0.875rem;
-  font-style: italic;
+.logo img {
+  height: 55px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 1000px) { 
+
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 100%;      
+    order: -1;        
+    margin-bottom: var(--spacing-sm); 
+    text-align: center;
+  }
+
+  .logo a {
+      display: inline-block; 
+      margin: 0 auto;
+  }
 }
 
 .nav {
@@ -235,11 +254,13 @@ a {
 
 /* Hero Section */
 .hero {
-  background-image: url('https://via.placeholder.com/1200x600');
-  background-size: cover;
-  background-position: center;
+  background-image: url('../images/index_assets/lanpage_hero.png');
+  background-size: cover;    
+  background-position: center; 
   padding: var(--spacing-huge) 0;
-  position: relative;
+  position: relative;  
+  height: 600px;
+       
 }
 
 .hero::before {
@@ -249,7 +270,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3); 
 }
 
 .hero .container {
@@ -362,8 +383,9 @@ a {
 
 /* Features Section */
 .features {
-  background-color: var(--color-gray-light);
+  background-color: #E0D8D1;
   padding: var(--spacing-xl) 0;
+  padding: 80px 0;
 }
 
 .features-grid {
@@ -392,14 +414,15 @@ a {
 }
 
 .feature-icon {
-  font-size: 2rem;
-  color: var(--color-gray-dark);
+  font-size: 3rem;
+  color: #00000055;
   margin-bottom: var(--spacing-sm);
 }
 
 .feature-title {
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #00000055;
 }
 
 @media (min-width: 768px) {
