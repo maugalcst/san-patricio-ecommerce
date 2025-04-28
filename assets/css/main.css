@@ -849,15 +849,9 @@ a {
   margin-bottom: var(--spacing-md);
 }
 
-.footer-logo h2 {
-  font-family: var(--font-secondary);
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.footer-logo p {
-  font-size: 0.875rem;
-  font-style: italic;
+.footer-logo img {
+  height: 40px;
+  width: auto; 
 }
 
 .footer-description {

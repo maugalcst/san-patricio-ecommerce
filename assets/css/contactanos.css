@@ -19,20 +19,29 @@ body {
 
 /* Hero Section */
 .hero {
-  height: 400px;
-  background-image: url('/hero-contact.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  height: 400px; /* Puedes mantener o ajustar esta altura */
+
+  /* Cambia la URL a la ruta correcta de tu imagen */
+  /* Usamos ../ para subir de 'css' a 'assets', luego bajamos a 'images/contactanos_assets' */
+  background-image: url('../images/contactanos_assets/bg_contactanos.png');
+
+  /* Estas propiedades ayudan a que la imagen se vea bien */
+  background-size: cover;     /* Escala la imagen para cubrir todo el div */
+  background-position: center; /* Centra la imagen */
+  position: relative;         /* Necesario para que .hero-overlay funcione */
 }
 
+/* Los estilos para .hero-overlay y .hero h1 parecen correctos */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.236); /* Capa blanca semitransparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,12 +51,24 @@ body {
   font-size: 4rem;
   font-weight: 600;
   color: var(--text-color);
+  background: none;
+  padding: 0;
+}
+
+
+.hero h1 .title-background {
+  background-color: var(--background-color, white);
+  border-radius: 10px;
+  padding: 0.5rem 2rem; 
 }
 
 /* Contact Section */
 .contact-section {
   padding: 4rem 2rem;
-  background-color: #FFF5EF;
+  background-image: linear-gradient(
+      #ffead7, 
+      #ffffff   
+  );
 }
 
 .contact-container {
@@ -63,13 +84,13 @@ body {
   font-weight: 600;
   margin-bottom: 2rem;
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  align-items: center; 
+  gap: 1rem; 
 }
 
 .contact-info h2 img {
-  width: 24px;
-  height: 24px;
+  width: 40px; 
+  height: 40px; 
 }
 
 .contact-info p {
