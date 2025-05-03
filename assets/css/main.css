@@ -3,7 +3,7 @@
 :root {
   --color-primary: #4E7646;
   --color-primary-light: #73a469;
-  --color-primary-dark: #355130;
+  --color-primary-dark: #4F7355;
   --color-secondary: #FFD582;
   --color-secondary-light: #fae7db;
   --color-secondary-dark: #f6c7ad;
@@ -736,7 +736,7 @@ a {
 
 /* Promo Section */
 .promo {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-dark);
   color: var(--color-white);
   padding: var(--spacing-xxl) 0;
 }

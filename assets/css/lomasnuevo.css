@@ -39,7 +39,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
   display: flex;
@@ -49,14 +49,18 @@ body {
 }
 
 .hero h1 img {
-  height: 3rem;
+  height: 3.1rem;
   width: auto;
   vertical-align: middle;
+  position: relative;
+  top: 5px;
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 2.0rem;
   color: #555;
+  position: relative;
+  bottom: 20px;
 }
 
 /* Featured Section */
@@ -87,9 +91,9 @@ body {
 
 .flower-image {
   position: absolute;
-  left: 0;          /* Pega la imagen al borde izquierdo de .featured-text */
-  bottom: -80px;
-  max-width: 200px;
+  left: -38px;         
+  bottom: -84px;
+  max-width: 230px;
   width: 100%;      
   height: auto;     
   z-index: 1;
@@ -107,6 +111,7 @@ body {
   border-radius: 8px;
   padding: 1rem;
   text-align: center;
+  color: #333;
 }
 
 .product-image {
@@ -164,6 +169,15 @@ body {
   padding: 2rem;
 }
 
+.content-area {
+  display: flex;           
+  gap: 2rem;               
+  padding: 2rem;           
+  align-items: flex-start; 
+  max-width: 1600px;       
+  margin: 2rem auto;       
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .featured {
@@ -211,5 +225,17 @@ body {
   
   .product-grid {
       grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .content-area {
+      flex-direction: column;
+      padding: 1rem;
+  }
+
+  .filters {
+      width: 100%;
+      margin-bottom: 2rem;
   }
 }
