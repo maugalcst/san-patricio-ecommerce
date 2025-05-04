@@ -18,46 +18,50 @@
     <main>
         <section class="auth-section">
             <div class="auth-container">
-                 <img src="assets/images/auth_assets/bottle_left.png" alt="" class="auth-decoration auth-decoration-left" aria-hidden="true">
+                <img src="assets/images/auth_assets/bottle_left.png" alt="" class="auth-decoration auth-decoration-left" aria-hidden="true">
 
-                <div class="auth-form-wrapper">
+                 <div class="auth-form-wrapper">
                     <h1 class="auth-title">REGISTRO</h1>
-                    <form class="auth-form" action="#" method="post"> <div class="form-group">
+                    <form class="auth-form" id="register-form">
+                        <div class="form-group">
                             <label for="register-nombre" class="sr-only">Nombre(s)</label>
-                            <input type="text" id="register-nombre" name="nombre" placeholder="Nombre(s)" required>
-                        </div>
+                            <input type="text" id="register-nombre" name="nombre" placeholder="Nombre(s)">
+                            <p class="error-message" id="error-nombre"></p> </div>
                         <div class="form-group">
                              <label for="register-apellido" class="sr-only">Apellido(s)</label>
-                             <input type="text" id="register-apellido" name="apellido" placeholder="Apellido(s)" required>
-                        </div>
+                             <input type="text" id="register-apellido" name="apellido" placeholder="Apellido(s)">
+                             <p class="error-message" id="error-apellido"></p> </div>
                         <div class="form-group">
                             <label for="register-email" class="sr-only">Email</label>
-                            <input type="email" id="register-email" name="email" placeholder="Email" required>
-                        </div>
+                            <input type="email" id="register-email" name="email" placeholder="Email">
+                             <p class="error-message" id="error-email"></p> </div>
                          <div class="form-group">
                             <label for="register-telefono" class="sr-only">Número de Teléfono</label>
-                            <input type="tel" id="register-telefono" name="telefono" placeholder="Número de Teléfono" required>
-                        </div>
+                            <input type="tel" id="register-telefono" name="telefono" placeholder="Número de Teléfono">
+                             <p class="error-message" id="error-telefono"></p> </div>
                         <div class="form-group">
                             <label for="register-password" class="sr-only">Contraseña</label>
-                            <input type="password" id="register-password" name="password" placeholder="Contraseña" required>
-                        </div>
+                            <input type="password" id="register-password" name="password" placeholder="Contraseña">
+                             <p class="error-message" id="error-password"></p> </div>
                          <div class="form-group">
                             <label for="register-confirm-password" class="sr-only">Confirma contraseña</label>
-                            <input type="password" id="register-confirm-password" name="confirm_password" placeholder="Confirma contraseña" required>
-                        </div>
+                            <input type="password" id="register-confirm-password" name="confirm_password" placeholder="Confirma contraseña">
+                             <p class="error-message" id="error-confirm-password"></p> </div>
                         <button type="submit" class="auth-button">Crear</button>
-                        </form>
+                    </form>
                 </div>
-
+                
                 <img src="assets/images/auth_assets/bottle_right.png" alt="" class="auth-decoration auth-decoration-right" aria-hidden="true">
-            </div>
+                </div>
         </section>
     </main>
 
     <div id="footer-placeholder"></div>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/partialsLoader.js"></script>
+    <script src="assets/js/headerScripts.js"></script>
+    <script src="assets/js/authForms.js"></script>
+    <script src="assets/js/main.js"></script> </body>
 
 </body>
 </html>
