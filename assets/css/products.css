@@ -11,96 +11,6 @@ body {
   background: white;
 }
 
-/* Header styles */
-.header {
-  background: white;
-  padding: 1rem;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.header-content {
-  max-width: 1724px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.logo {
-  position: relative;
-}
-
-.logo h1 {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.logo .subtitle {
-  font-family: 'Fleur De Leah', cursive;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo .clover {
-  width: 17px;
-  height: 17px;
-}
-
-.logo .clover-top {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 22px;
-  right: 52px;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: black;
-  font-size: 1.625rem;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.search-bar {
-  position: relative;
-}
-
-.search-bar input {
-  width: 276px;
-  padding: 0.5rem;
-  border: none;
-  border-bottom: 1px solid black;
-  font-family: 'Afacad', Helvetica;
-  font-size: 1.25rem;
-  text-align: center;
-}
-
-.search-icon {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.icon {
-  font-size: 1.75rem;
-  cursor: pointer;
-}
-
 /* Main content styles */
 .main-content {
   display: flex;
@@ -112,18 +22,18 @@ body {
 
 /* Filters sidebar */
 .filters {
-  width: 405px;
+  width: 360px;
   padding: 1.5rem;
 }
 
 .page-title {
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   margin-bottom: 2.5rem;
 }
 
 .filters-title {
-  font-size: 2.5rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
 }
 
@@ -133,7 +43,7 @@ body {
 
 .filter-section h3 {
   font-family: 'Cabin', Helvetica;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -141,10 +51,10 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.7rem;
   font-family: 'Cabin', Helvetica;
   color: rgba(0, 0, 0, 0.51);
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   cursor: pointer;
 }
 
@@ -157,6 +67,7 @@ body {
 .products {
   flex: 1;
   padding: 1.5rem;
+  background: #f5f5f5;
 }
 
 .sort-bar {

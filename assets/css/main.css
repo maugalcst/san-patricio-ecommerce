@@ -3,7 +3,7 @@
 :root {
   --color-primary: #4E7646;
   --color-primary-light: #73a469;
-  --color-primary-dark: #355130;
+  --color-primary-dark: #4F7355;
   --color-secondary: #FFD582;
   --color-secondary-light: #fae7db;
   --color-secondary-dark: #f6c7ad;
@@ -12,6 +12,7 @@
   --color-gray-light: #f5f5f5;
   --color-gray: #e0e0e0;
   --color-gray-dark: #4a4a4a;
+  --color-footer: #E0D8D1;
   
   --font-primary: 'Cabin', sans-serif;
   --font-secondary: 'Afacad', serif;
@@ -121,7 +122,6 @@ a {
 }
 
 @media (max-width: 1000px) { 
-
   .header-container {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -135,8 +135,40 @@ a {
   }
 
   .logo a {
-      display: inline-block; 
-      margin: 0 auto;
+    display: inline-block; 
+    margin: 0 auto;
+  }
+
+  .nav {
+    display: none; 
+    width: 100%;
+    order: 5; 
+    background-color: var(--color-white); 
+    padding: var(--spacing-md) 0;
+    box-shadow: var(--shadow-md); 
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+  }
+
+  .nav.nav-active {
+    display: block;
+  }
+
+  .nav .menu {
+    flex-direction: column; 
+    align-items: center; 
+    gap: var(--spacing-md); 
+  }
+
+  .nav .menu li a {
+    padding: var(--spacing-sm) 0; 
+  }
+
+  .nav .menu li a::after {
+    display: none;
   }
 }
 
@@ -256,6 +288,7 @@ a {
 /* Hero Section */
 .hero {
   background-image: url('../images/index_assets/lanpage_hero.png');
+  background-color: #000;
   background-size: cover;    
   background-position: center; 
   padding: var(--spacing-huge) 0;
@@ -464,8 +497,8 @@ a {
 .products {
   padding: var(--spacing-xxl) 0;
   background-image: linear-gradient(
-      var(--color-secondary-light), /* Color de arriba (#fae7db) */
-      var(--color-white)            /* Color de abajo (#ffffff) */
+      var(--color-secondary-light), 
+      var(--color-white)            
   );
 }
 
@@ -561,7 +594,8 @@ a {
   transition: all 0.3s ease;
 }
 
-.pagination-dot.active, .pagination-dot:hover {
+.pagination-dot.active,
+.pagination-dot:hover {
   background-color: var(--color-black);
 }
 
@@ -702,7 +736,7 @@ a {
 
 /* Promo Section */
 .promo {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-dark);
   color: var(--color-white);
   padding: var(--spacing-xxl) 0;
 }
@@ -795,7 +829,7 @@ a {
 
 /* Footer */
 .footer {
-  background-color: var(--color-gray-light);
+  background-color: var(--color-footer);
   padding: var(--spacing-xxl) 0 var(--spacing-xl);
 }
 
@@ -815,15 +849,9 @@ a {
   margin-bottom: var(--spacing-md);
 }
 
-.footer-logo h2 {
-  font-family: var(--font-secondary);
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.footer-logo p {
-  font-size: 0.875rem;
-  font-style: italic;
+.footer-logo img {
+  height: 40px;
+  width: auto; 
 }
 
 .footer-description {
