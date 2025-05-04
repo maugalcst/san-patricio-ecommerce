@@ -17,39 +17,30 @@ body {
   color: var(--text-color);
 }
 
-/* Hero Section */
 .hero {
-  height: 400px; /* Puedes mantener o ajustar esta altura */
-
-  /* Cambia la URL a la ruta correcta de tu imagen */
-  /* Usamos ../ para subir de 'css' a 'assets', luego bajamos a 'images/contactanos_assets' */
+  height: 400px;
   background-image: url('../images/contactanos_assets/bg_contactanos.png');
-
-  /* Estas propiedades ayudan a que la imagen se vea bien */
-  background-size: cover;     /* Escala la imagen para cubrir todo el div */
-  background-position: center; /* Centra la imagen */
-  position: relative;         /* Necesario para que .hero-overlay funcione */
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-/* Los estilos para .hero-overlay y .hero h1 parecen correctos */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.236); /* Capa blanca semitransparente */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: rgba(255, 255, 255, 0.236);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 3.3rem;
   font-weight: 600;
+  font-family: 'Afacad', sans-serif;
   color: var(--text-color);
   background: none;
   padding: 0;
@@ -110,7 +101,7 @@ body {
 }
 
 .contact-form h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 2rem;
 }

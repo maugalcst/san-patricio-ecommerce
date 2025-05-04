@@ -18,55 +18,52 @@ body {
 
 /* Hero */
 .hero-cart {
-  position: relative; /* Para posicionar las imágenes de fondo si es necesario */
-  padding: 50px 2rem; /* Espaciado interno (ajusta verticalmente según necesites) */
-  overflow: hidden;   /* Evita que las imágenes de fondo se salgan si son muy grandes */
-  text-align: center; /* Centra el H1 y P */
-
-  /* Fondos Múltiples: Imagen1, Imagen2, Degradado */
+  position: relative;
+  padding: 50px 2rem;
+  overflow: hidden;
+  text-align: center;
   background-image:
-      url('../images/carrito_assets/flores1.svg'),   /* Capa superior */
-      url('../images/carrito_assets/flores2.svg'),   /* Capa intermedia */
-      linear-gradient(to bottom, #ffdc825f, #ffffff); /* Capa inferior ( Amarillo claro a Blanco ) */
-
-  /* Posición para cada fondo */
+      url('../images/carrito_assets/flores1.svg'),
+      url('../images/carrito_assets/flores2.svg'),
+      linear-gradient(to bottom, #ffdc8250, #ffffff);
   background-position:
-      top -60px right 60px,    /* flores1.svg - arriba izquierda con offset */
-      bottom 140px right 220px, /* flores2.svg - abajo derecha con offset */
-      0 0;                   /* Degradado - cubre todo */
-
-  /* Repetición (ninguno se repite) */
-  background-repeat: no-repeat; /* Se aplica a todas las capas por defecto si solo pones uno */
-
-  /* Tamaño para cada fondo */
+      top -60px right 60px,
+      bottom 140px right 220px,
+      0 0;
+  background-repeat: no-repeat;
   background-size:
-      280px auto,       /* Tamaño para flores1.svg (ajusta 180px) */
-      250px auto,       /* Tamaño para flores2.svg (ajusta 160px) */
-      auto;  
-  height: 250px;           /* Tamaño para el degradado (cubre todo) */
+      280px auto,
+      250px auto,
+      auto;
+  height: 250px;
 }
 
 .hero-cart h1 {
-  font-size: 3rem;        /* Ajusta según necesites */
+  font-size: 3rem;
   margin-bottom: 15px;
-  color: #333333;        /* Color "semi-negro" */
-  position: relative; 
-  right: 120px;   /* Para asegurar que esté sobre las imágenes de fondo */
+  color: #333333;
+  position: relative;
+  right: 120px;
   z-index: 1;
   font-family: 'Afacad', sans-serif;
-  font-weight: 900;/* Cambia la fuente si es necesario *
-  /* Quitamos flex/align/gap si ya no hay icono */
+  font-weight: 900;
 }
 
 .hero-cart p {
   font-size: 20px;
-  max-width: 500px;     /* Limita ancho del párrafo */
-  margin: 0 auto;       /* Centra el párrafo */
+  max-width: 500px;
+  margin: 0 auto;
   position: relative;
   bottom: 16px;
   z-index: 1;
-  color: #242424;   
-  font-family: 'Cabin', sans-serif;        /* Color para el párrafo (ajusta si es necesario) */
+  color: #242424;
+  font-family: 'Cabin', sans-serif;
+}
+
+.hero-cart i {
+  position: relative;
+  top: 6px;
+  font-size: 45px;
 }
 
 /* Cart table */

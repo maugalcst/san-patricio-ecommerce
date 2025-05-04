@@ -53,6 +53,33 @@
   color: #555;
 }
 
+/* Contenedor para el botón de logout */
+.profile-actions {
+  margin-top: 2.5rem; /* Espacio arriba */
+  padding-top: 1.5rem; /* Espacio sobre el botón */
+  border-top: 1px solid var(--color-gray-light, #f0f0f0); /* Línea separadora opcional */
+}
+
+/* Estilo del botón/enlace de logout */
+.logout-button {
+  display: inline-block; /* Comportamiento de botón */
+  padding: 0.75rem 1.5rem; /* Espaciado interno */
+  background-color: var(--color-gray-dark, #333); /* Color oscuro */
+  color: var(--color-white, #fff); /* Texto blanco */
+  border: none;
+  border-radius: var(--border-radius-md, 8px); /* Bordes redondeados */
+  text-decoration: none; /* Quitar subrayado de enlace */
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.logout-button:hover {
+  background-color: var(--primary-color, #4a7c59); /* Cambia color al pasar el ratón */
+  color: var(--color-white, #fff);
+}
+
 .profile-main-content {
   flex-grow: 1;
 }
@@ -66,11 +93,23 @@
 }
 
 .order-list {
-  width: auto;
+  /* Scroll independiente */
+  max-height: 600px; /* << ALTURA MÁXIMA: Ajusta este valor (en px, vh, etc.) */
+                     /* Define cuánto espacio vertical ocupará antes de mostrar scroll */
+  overflow-y: auto;  /* Muestra barra de scroll vertical SOLO si es necesario */
+
+  /* Mejoras visuales / de Orden */
+  border: 1px solid var(--color-gray-light, #f0f0f0); /* Borde sutil alrededor de la lista */
+  border-radius: var(--border-radius-md, 8px);      /* Bordes redondeados para el contenedor */
+  padding: 0.5rem 1rem; /* Espacio interno (menos arriba/abajo, más a los lados) */
+  margin-top: 1rem;     /* Espacio entre el título "Órdenes" y la lista */
 }
 
 .order-date-group {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem; /* Espacio entre grupos de fechas (reducido un poco) */
+}
+.order-date-group:last-child {
+  margin-bottom: 0; /* Sin margen extra después del último grupo */
 }
 
 .order-date {
@@ -87,12 +126,12 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  padding: 1rem 0;
+  padding: 1.5rem 1rem;
   border-bottom: 1px solid var(--color-gray-light, #f0f0f0);
 }
 
 .order-item:last-child {
-  border-bottom: none;
+  border-bottom: none; 
 }
 
 .order-item-image img {
@@ -100,12 +139,14 @@
   height: 80px;
   object-fit: cover;
   border-radius: 4px;
+  flex-shrink: 0; 
 }
 
 .order-item-details {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.3rem; 
+  flex-grow: 1; 
 }
 
 .order-item-name {
