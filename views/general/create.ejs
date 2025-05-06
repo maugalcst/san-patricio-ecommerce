@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <%- include('../partials/header'); %>
+
+    <main>
+        <section class="auth-section">
+            <div class="auth-container">
+                <img src="images/auth_assets/bottle_left.png" alt="" class="auth-decoration auth-decoration-left" aria-hidden="true">
+
+                 <div class="auth-form-wrapper">
+                    <h1 class="auth-title">REGISTRO</h1>
+                    <form class="auth-form" id="register-form" action="/creating" method="post">
+                        <div class="form-group">
+                            <label for="register-nombre" class="sr-only">Nombre(s)</label>
+                            <input type="text" id="name" name="name" placeholder="Nombre(s)">
+                            <p class="error-message" id="error-nombre"></p> </div>
+                        <div class="form-group">
+                             <label for="register-apellido" class="sr-only">Apellido(s)</label>
+                             <input type="text" id="lastname" name="lastname" placeholder="Apellido(s)">
+                             <p class="error-message" id="error-apellido"></p> </div>
+                        <div class="form-group">
+                            <label for="register-email" class="sr-only">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email">
+                             <p class="error-message" id="error-email"></p> </div>
+                         <div class="form-group">
+                            <label for="register-telefono" class="sr-only">Número de Teléfono</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono">
+                             <p class="error-message" id="error-telefono"></p> </div>
+                        <div class="form-group">
+                            <label for="register-password" class="sr-only">Contraseña</label>
+                            <input type="password" id="password" name="password" placeholder="Contraseña">
+                             <p class="error-message" id="error-password"></p> </div>
+                         <div class="form-group">
+                            <label for="register-confirm-password" class="sr-only">Confirma contraseña</label>
+                            <input type="password" id="passwordconfirm" name="confirm_password" placeholder="Confirma contraseña">
+                             <p class="error-message" id="error-confirm-password"></p> </div>
+                        <button type="submit" class="auth-button">Crear</button>
+                    </form>
+                </div>
+                
+                <img src="images/auth_assets/bottle_right.png" alt="" class="auth-decoration auth-decoration-right" aria-hidden="true">
+                </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer'); %>
+
+    <script src="js/partialsLoader.js"></script>
+    <script src="js/headerScripts.js"></script>
+    <script src="js/authForms.js"></script>
+    <script src="js/main.js"></script> </body>
+
+</body>
+</html>

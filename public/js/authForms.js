@@ -11,18 +11,18 @@ function initializeRegisterForm() {
       console.log(" - Formulario de registro encontrado. Añadiendo listener...");
 
       form.addEventListener('submit', function(event) {
-          event.preventDefault();
+     //     event.preventDefault();
           console.log("Submit interceptado (Registro).");
           clearErrors(form);
           let isValid = true;
 
           // Selectores y valores
-          const nombreInput = document.getElementById('register-nombre');
-          const apellidoInput = document.getElementById('register-apellido');
-          const emailInput = document.getElementById('register-email');
-          const telefonoInput = document.getElementById('register-telefono');
-          const passwordInput = document.getElementById('register-password');
-          const confirmPasswordInput = document.getElementById('register-confirm-password');
+          const nombreInput = document.getElementById('name');
+          const apellidoInput = document.getElementById('lastname');
+          const emailInput = document.getElementById('email');
+          const telefonoInput = document.getElementById('phone');
+          const passwordInput = document.getElementById('password');
+          const confirmPasswordInput = document.getElementById('passwordconfirm');
 
           const nombre = nombreInput.value.trim();
           const apellido = apellidoInput.value.trim();
@@ -43,8 +43,7 @@ function initializeRegisterForm() {
 
           // Resultado
           if (isValid) {
-              console.log('Formulario válido (Registro). Enviando datos (simulado)...');
-              alert('¡Registro exitoso! (Simulación)');
+              console.log('Formulario válido (Registro). Enviando datos...');
               // Redirigir o limpiar formulario
           } else {
               console.log('Formulario inválido (Registro). Errores mostrados.');
@@ -70,7 +69,7 @@ function initializeLoginForm() {
       console.log(" - Formulario de login encontrado. Añadiendo listener...");
 
       form.addEventListener('submit', function(event) {
-          event.preventDefault(); // Prevenir envío real
+         // event.preventDefault(); // Prevenir envío real
           console.log("Submit interceptado (Login).");
 
           // Limpiar errores previos
@@ -104,7 +103,6 @@ function initializeLoginForm() {
           // --- Si todo es válido ---
           if (isValid) {
               console.log('Formulario válido (Login). Iniciando sesión (simulado)...');
-              alert('¡Inicio de sesión exitoso! (Simulación)');
               // --- Aquí iría la llamada fetch() al backend para autenticar ---
               // Por ahora, podríamos redirigir al perfil:
               // window.location.href = 'perfil.html';

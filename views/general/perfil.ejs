@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Perfil - San Patricio Perfumería</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/perfil.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <%- include('../partials/header'); %>
+
+    <main class="profile-page-container">
+        <div class="profile-layout">
+            <aside class="profile-sidebar">
+                <h2 class="profile-title">
+                    Perfil
+                </h2>
+                <div class="profile-info">
+                    <p class="info-item">
+                        <span class="info-label">Email</span>
+                        <span class="info-value"><%= email %></span>
+                    </p>
+                    <p class="info-item">
+                        <span class="info-label">Teléfono</span>
+                        <span class="info-value"><%= phone %></span>
+                    </p>
+                </div>
+
+                <div class="profile-actions">
+                    <a href="/logout" class="logout-button">Cerrar Sesión</a>
+                </div>
+            </aside>
+
+            <section class="profile-main-content">
+                <h2 class="section-title">Órdenes</h2>
+                <div class="order-list">
+                    <div class="order-date-group">
+                        <h3 class="order-date">26 febrero 2025</h3>
+                        <div class="order-item">
+                            <div class="order-item-image">
+                                <img src="https://via.placeholder.com/80/FFD700/000000?text=Perfume"
+                                    alt="Nombre del Perfume" />
+                            </div>
+                            <div class="order-item-details">
+                                <span class="order-item-name">NOMBRE DEL PERFUME</span>
+                                <span class="order-item-quantity">Cantidad: 1</span>
+                                <span class="order-item-total">Total: $1950 MX</span>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="order-item-image">
+                                <img src="https://via.placeholder.com/80/FFC0CB/000000?text=Perfume"
+                                    alt="Nombre del Perfume" />
+                            </div>
+                            <div class="order-item-details">
+                                <span class="order-item-name">NOMBRE DEL PERFUME</span>
+                                <span class="order-item-quantity">Cantidad: 1</span>
+                                <span class="order-item-total">Total: $1950 MX</span>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="order-item-image">
+                                <img src="https://via.placeholder.com/80/FFC0CB/000000?text=Perfume"
+                                    alt="Nombre del Perfume" />
+                            </div>
+                            <div class="order-item-details">
+                                <span class="order-item-name">NOMBRE DEL PERFUME</span>
+                                <span class="order-item-quantity">Cantidad: 1</span>
+                                <span class="order-item-total">Total: $1950 MX</span>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="order-item-image">
+                                <img src="https://via.placeholder.com/80/FFC0CB/000000?text=Perfume"
+                                    alt="Nombre del Perfume" />
+                            </div>
+                            <div class="order-item-details">
+                                <span class="order-item-name">NOMBRE DEL PERFUME</span>
+                                <span class="order-item-quantity">Cantidad: 1</span>
+                                <span class="order-item-total">Total: $1950 MX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-date-group">
+                        <h3 class="order-date">15 enero 2025</h3>
+                        <div class="order-item">
+                            <div class="order-item-image">
+                                <img src="https://via.placeholder.com/80/E0FFFF/000000?text=Perfume"
+                                    alt="Nombre del Perfume" />
+                            </div>
+                            <div class="order-item-details">
+                                <span class="order-item-name">NOMBRE DEL PERFUME</span>
+                                <span class="order-item-quantity">Cantidad: 2</span>
+                                <span class="order-item-total">Total: $3800 MX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <%- include('../partials/footer'); %>
+
+    <script src="js/partialsLoader.js"></script>
+    <script src="js/headerScripts.js"></script>
+    <script src="js/productSection.js"></script>
+    <script src="js/main.js"></script> </body>
+</body>
+
+</html>
